@@ -11,6 +11,7 @@ args = parser.parse_args()
 if args.city:
     url += f"&by_city={args.city}"
 
+
 @dataclass
 class Brewery:
     id: str
@@ -31,11 +32,12 @@ class Brewery:
     street: str
 
     def __str__(self):
-        return f"{self.name} ({self.brewery_type}) - {self.city}, {self.state} {self.country}"
+        return f"{self.name} - {self.city}, {self.country}"
+
 
 response = requests.get(url)
 data = response.json()
-l=[Brewery(**brewery) for brewery in data]
+lista = [Brewery(**brewery) for brewery in data]
 
-for i in l:
+for i in lista:
     print(i)

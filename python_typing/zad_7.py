@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 import requests
+
 url = "https://api.openbrewerydb.org/v1/breweries?per_page=20"
+
 
 @dataclass
 class Brewery:
@@ -22,11 +24,12 @@ class Brewery:
     street: str
 
     def __str__(self):
-        return f"{self.name} ({self.brewery_type}) - {self.city}, {self.state} {self.country}"
+        return f"{self.name} - {self.city}, {self.country}"
+
 
 response = requests.get(url)
 data = response.json()
-l=[Brewery(**brewery) for brewery in data]
+lista = [Brewery(**brewery) for brewery in data]
 
-for i in l:
+for i in lista:
     print(i)
