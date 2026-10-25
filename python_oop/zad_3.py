@@ -6,7 +6,8 @@ class Property:
         self.address = address
 
     def __str__(self):
-       return f"powierzchnia: {self.area}, pokoje: {self.rooms}, cena: {self.price}, adres: {self.address}"
+        return f"powierzchnia: {self.area}, pokoje: {self.rooms}, cena: {self.price}, adres: {self.address}"
+
 
 class House(Property):
     def __init__(self, area: int, rooms: int, price: float, address: str, plot: int):
