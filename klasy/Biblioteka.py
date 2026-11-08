@@ -65,3 +65,4 @@ class Order:
 
     def __str__(self):
         return f"Student: {self.student} data: {self.order_date} pracownik: {self.employee.first_name} {self.employee.last_name}. Autorzy: {[book.author_name + ' ' + book.author_surname for book in self.books]}"
+    
