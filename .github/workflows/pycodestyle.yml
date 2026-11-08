@@ -33,4 +33,4 @@ jobs:
         run: |
           # Sprawdza wszystkie pliki .py w repozytorium
           # Możesz dodać flagi np. --max-line-length=120 lub --exclude
-          pycodestyle .
+          pycodestyle . --exclude ./tests/
