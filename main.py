@@ -1,5 +1,6 @@
 import string
 
+
 def is_palindrome(text: str) -> bool:
     text = text.lower()
     text = ''.join(char for char in text if char.isalnum())
