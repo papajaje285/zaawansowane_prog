@@ -8,7 +8,7 @@ while True:
     for i, linia in enumerate(linie):
         if linia.startswith("pending"):
             znaleziony_indeks = i
-            break 
+            break
 
     if znaleziony_indeks is not None:
         linie[znaleziony_indeks] = "in_progress\n"
